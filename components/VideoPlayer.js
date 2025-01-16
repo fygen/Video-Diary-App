@@ -22,13 +22,13 @@ const VideoPlayer = ({ uri }) => {
   }
 
   return (
-    <View style={styles.container}>
+    <>
       <VideoView
         style={styles.video}
         player={player}
         allowsFullscreen
         allowsPictureInPicture
-      />
+        />
       <View style={styles.controlsContainer}>
         <Button
           title={isPlaying ? "Pause" : "Play"}
@@ -39,25 +39,25 @@ const VideoPlayer = ({ uri }) => {
               player.play();
             }
           }}
-        />
+          />
       </View>
-    </View>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    maxHeight: "%25",
+    maxWidth: "%25",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#000",
   },
-  video: {
-    maxWidth: "100%",
-    maxHeight: "100%",
-    top: "50%",
-    left: "50%",
-  },
+  // video: {
+  //   maxWidth: "50%",
+  //   maxHeight: "50%",
+  // },
   errorContainer: {
     flex: 1,
     justifyContent: "center",

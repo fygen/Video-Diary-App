@@ -8,6 +8,7 @@ export default function Home() {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Video Diary App</Text>
       <Button title="Start" onPress={() => router.push('/video-selection')} />
+      <Button title='Video List' onPress={() => router.push('/video-list')}  />
     </View>
   );
 }
